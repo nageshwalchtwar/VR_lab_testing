@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <form action="/process" method="post">
+        <label for="loc1_strategy">Locator Strategy 1:</label>
+        <input type="text" id="loc1_strategy" name="loc1_strategy"value="id"><br>
+        <label for="loc1_value">Locator Value 1:</label>
+        <input type="int" id="loc1_value" name="loc1_value"value='input[id=":r5:"]'><br>
+        <label for="action1">Action 1:</label>
+        <input type="text" id="action1" name="action1"value="input"><br>
+        <label for="value1">Value 1:</label>
+        <input type="text" id="value1" name="value1"value="akshara.akkaladevi@gmail.com"><br>
+        
+        <label for="loc2_strategy">Locator Strategy 2:</label>
+        <input type="text" id="loc2_strategy" name="loc2_strategy"value="xpath"><br>
+        <label for="loc2_value">Locator Value 2:</label>
+        <input type="text" id="loc2_value" name="loc2_value"value='//*[@id=":r6:"]'><br>
+        <label for="action2">Action 2:</label>
+        <input type="text" id="action2" name="action2"value="input"><br>
+        <!-- <label for="value2">Value 2:</label>
+        <input type="text" id="value2" name="value2"value="Aksh0105"><br> -->
+        
+        <label for="loc3_strategy">Locator Strategy 3:</label>
+        <input type="text" id="loc3_strategy" name="loc3_strategy" value="xpath"><br>
+        <label for="loc3_value">Locator Value 3:</label>
+        <input type="text" id="loc3_value" name="loc3_value" value='//button[contains(@class,"MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge mt-2 css-ge0mlf")]'><br>
+        <label for="action3">Action 3:</label>
+        <input type="text" id="action3" name="action3" value="click"><br>
+
+        <label for="loc4_strategy">Locator Strategy 4:</label>
+        <input type="text" id="loc4_strategy" name="loc4_strategy" value="xpath"><br>
+        <label for="loc4_value">Locator Value 4:</label>
+        <input type="text" id="loc4_value" name="loc4_value" value="//*[contains(text(), 'visibility')]"><br>
+        <label for="action4">Action 4:</label>
+        <input type="text" id="action4" name="action4" value="click"><br>
+        
+        <!-- Add fields for other actions and prompts as needed -->
+
+        <label for="loc5_strategy">Locator Strategy:</label>
+        <input type="text" id="loc5_strategy" name="loc5_strategy" value="alert_text"><br>
+        <label for="loc5_value">Locator Value:</label>
+        <input type="text" id="loc5_value" name="loc5_value" value="none"><br>
+        <label for="action1">Action:</label>
+        <input type="text" id="action5" name="action5" value="handle_prompt"><br>
+        
+        <label for="prompt5_text">Prompt Text:</label>
+        <input type="text" id="prompt5_text" name="prompt5_text" value="Experiment is currently offline"><br>
+        <label for="prompt5_recipient">Email Recipient:</label>
+        <input type="text" id="prompt5_recipient" name="prompt5_recipient" value="akshara.akkaladevi@gmail.com"><br>
+        <label for="prompt5_subject">Email Subject:</label>
+        <input type="text" id="prompt5_subject" name="prompt5_subject" value="Experiment Offline"><br>
+        
+        <label for="prompt6_text">Prompt Text:</label>
+        <input type="text" id="prompt6_text" name="prompt6_text" value="Experiment is currently in use"><br>
+        <label for="prompt6_action">Action:</label>
+        <input type="text" id="prompt6_action" name="prompt6_action" value="accept_prompt"><br>
+        
+        <label for="loc7_strategy">Locator Strategy:</label>
+        <input type="text" id="loc7_strategy" name="loc7_strategy" value="xpath"><br>
+        <label for="loc7_value">Locator Value:</label>
+        <input type="text" id="loc7_value" name="loc7_value" value="//*[contains(text(), 'Move Down')]"><br>
+        <label for="action7">Action:</label>
+        <input type="text" id="action7" name="action7" value="click"><br>
+        
+        <label for="loc8_strategy">Locator Strategy:</label>
+        <input type="text" id="loc8_strategy" name="loc8_strategy" value="xpath"><br>
+        <label for="loc8_value">Locator Value:</label>
+        <input type="text" id="loc8_value" name="loc8_value" value="//video[@class='max-h-[95%] min-h-[95%] min-w-[95%] max-w-[95%] object-contain']"><br>
+        <label for="action8">Action:</label>
+        <input type="text" id="action8" name="action8" value="process_video_frames"><br>
+        
+        <label for="loc9_strategy">Locator Strategy:</label>
+        <input type="text" id="loc9_strategy" name="loc9_strategy" value="xpath"><br>
+        <label for="loc9_value">Locator Value:</label>
+        <input type="text" id="loc9_value" name="loc9_value" value="//*[contains(text(), 'Move Up')]"><br>
+        <label for="action9">Action:</label>
+        <input type="text" id="action9" name="action9" value="click"><br>
+
+        <label for="loc10_strategy">Locator Strategy:</label>
+        <input type="text" id="loc10_strategy" name="loc10_strategy" value="xpath"><br>
+        <label for="loc10_value">Locator Value:</label>
+        <input type="text" id="loc9_value" name="loc10_value" value="//*[contains(text(), 'Move Up')]"><br>
+        <label for="action10">Action:</label>
+        <input type="text" id="action10" name="action10" value="click"><br>
+ 
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
