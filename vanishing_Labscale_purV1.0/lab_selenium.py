@@ -54,7 +54,7 @@ def process_video_frames(driver: webdriver.Chrome, video_xpath: str):
 
     for i in range(total_screenshots):
         video_screenshot = video_element.screenshot_as_png
-        update_timestamps(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        update_timestamps(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S,%f"))
 
         if move == 0:
             screenshot_file = f"moving_down_lab/screenshot_{i}.png"
@@ -128,8 +128,11 @@ def perform_action(element):
             pass
         # Add more locator strategies if needed
     except NoSuchElementException:
-        web_element = driver.find_element(By.XPATH,"//*[contains(text(), 'Exit Experiment')]")
-        print("Testing ended abruptly!!!")
+        web_element = driver.find_element(By.XPATH, "//*[contains(text(), 'Exit Experiment')]")
+        web_element.click()
+        # print(list(web_element))
+        print(f"Element not found: {locator_value}")
+        return
 
     # Perform actions on the web element
     if action == 'input':
@@ -140,7 +143,7 @@ def perform_action(element):
         #     web_element[2].click()
         # else:
         if locator_value == "//*[contains(text(), 'Move Down')]" :
-            d_movement = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            d_movement = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S,%f')
             web_element.click()
         elif locator_value == "Vanishing Rod":
             script = """
