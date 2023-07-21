@@ -3,15 +3,21 @@ from skimage.metrics import structural_similarity as ssim
 from datetime import datetime
 import lab_selenium
 import logging
+import os
 logging.basicConfig(filename='lab_latency.log', filemode='a',format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 arr = lab_selenium.timestamps
 print(arr)
 arr = [datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S,%f') for date_str in arr]
 
 # moving down click ka timestamp
-moving_down  = datetime.strptime(lab_selenium.d_movement, '%Y-%m-%d %H:%M:%S,,%f')
-print(moving_down)
-
+moving_down_str = lab_selenium.d_movement.strip()  # Remove leading/trailing whitespace
+if moving_down_str:
+    moving_down = datetime.strptime(moving_down_str, '%Y-%m-%d %H:%M:%S,%f')
+    print(moving_down)
+else:
+    print("Error: 'lab_selenium.d_movement' is an empty string.")
+    
+    
 start_index = 0
 end_index = 9
 
@@ -19,7 +25,7 @@ def check_latency(screenshot_paths):
     still_count = 0
     moving_count = 0
     flag=0
-    # Iterate over consecutive pairs of screensots
+    # Iterate over consecutive pairs of screenshots
     for i in range(0,end_index+1,2):
         # Load the current and next screenshots
         # The dynamic number
@@ -30,6 +36,16 @@ def check_latency(screenshot_paths):
 
         current_image = cv2.imread(current_image)
         next_image = cv2.imread(next_image)
+        
+        #for checks and exception handling 
+        if current_image is None:
+            print(f"Error: Failed to load image {current_image}")
+            continue
+
+        if next_image is None:
+            print(f"Error: Failed to load image {next_image}")
+            continue
+
 
         # Compare the current and next screenshots
         # similarity_score = compare_images(current_image, next_image)
@@ -49,9 +65,14 @@ def check_latency(screenshot_paths):
                 print("still --> moving")
                 # Timestamp 1
                 #timestamp1 = datetime.now()
-                timestamp1 = arr[i+1]
-                current_image = 'moving_down_lab/screenshot_{}.png'.format(i)
-                next_image  = 'moving_down_lab/screenshot_{}.png'.format(i+1)
+                if i<=end_index:
+                    timestamp1 = arr[i+1]
+                    current_image = 'moving_down_lab/screenshot_{}.png'.format(i)
+                    next_image  = 'moving_down_lab/screenshot_{}.png'.format(i+1)
+                if not (os.path.exists(current_image) and os.path.exists(next_image)):
+                    print(f"Error: Some screenshot files are missing. Skipping iteration {i}.")
+                    continue
+                
                 print(current_image)
                 print(next_image)
 
