@@ -1,4 +1,5 @@
 import os
+import lab_timing
 import yaml
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -23,8 +24,8 @@ from dotenv import load_dotenv
 import logging
 from logging.handlers import RotatingFileHandler
 from skimage.metrics import structural_similarity as ssim
-import lab_timing
 import ss_4_lab
+import log_graph
 #logging.basicConfig(filename='app.log', filemode='a', format='%(name)s - %(levelname)s - %(message)s')
 logging.basicConfig(filename='lab_direction.log', filemode='a',format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 # Create a logger
