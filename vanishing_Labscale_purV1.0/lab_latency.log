@@ -1,25 +1,6 @@
 
 2023-07-10 18:57:02,992 - INFO - Latency: 3.000000 seconds
 2023-07-11 10:40:45,604 - INFO - Latency: 2.000000 seconds
-2023-07-11 11:25:55,955 - INFO - Latency: 3.000000 seconds
-2023-07-11 11:44:16,584 - INFO - Latency: 2.000000 seconds
-2023-07-11 12:00:24,824 - INFO - Latency: 2.000000 seconds
-2023-07-11 12:03:59,651 - INFO - Latency: 2.000000 seconds
-2023-07-11 12:41:42,727 - INFO - Latency: 2.000000 seconds
-2023-07-11 14:24:31,165 - INFO - Latency: 2.000000 seconds
-2023-07-11 15:36:39,928 - INFO - Latency: 3.000000 seconds
-2023-07-11 15:57:48,506 - INFO - Latency: 2.000000 seconds
-2023-07-11 16:02:31,544 - INFO - Latency: 3.000000 seconds
-2023-07-11 16:06:06,951 - INFO - Latency: 3.000000 seconds
-2023-07-11 16:19:16,985 - INFO - Latency: 2.000000 seconds
-2023-07-11 17:39:45,358 - INFO - Latency: 2.000000 seconds
-2023-07-11 19:45:31,983 - INFO - Latency: 2.000000 seconds
-2023-07-11 19:48:59,218 - INFO - Latency: 3.000000 seconds
-2023-07-11 19:57:01,760 - INFO - Latency: 3.000000 seconds
-2023-07-11 20:00:15,784 - INFO - Latency: 2.000000 seconds
-2023-07-11 20:33:52,272 - INFO - Latency: 2.000000 seconds
-2023-07-11 20:39:12,107 - INFO - Latency: 2.000000 seconds
-2023-07-11 20:41:40,330 - INFO - Latency: 3.000000 seconds
 2023-07-11 20:54:00,954 - INFO - Latency: 2.000000 seconds
 2023-07-12 11:19:25,798 - INFO - Latency: 3.000000 seconds
 2023-07-12 11:40:51,856 - INFO - Latency: 2.000000 seconds
@@ -29,5 +10,11 @@
 2023-07-16 18:34:00,954 - INFO - Latency: 2.000000 seconds
 2023-07-17 11:01:28,798 - INFO - Latency: 3.000000 seconds
 2023-07-18 11:40:12,856 - INFO - Latency: 2.000000 seconds
-2023-07-19 12:05:11,133 - INFO - Latency: 2.000000 seconds
-
+2023-07-19 12:05:11,133 - INFO - Latency: 3.000000 seconds
+2023-07-20 12:41:19,410 - INFO - Latency: 2.000000 seconds
+2023-07-21 11:26:02,414 - INFO - Latency: 3.000000 seconds
+2023-07-22 11:31:28,698 - INFO - Latency: 2.000000 seconds
+2023-07-22 15:29:38,383 - INFO - Latency: 3.000000 seconds
+2023-07-22 19:55:50,974 - INFO - Latency: 2.000000 seconds
+2023-07-22 19:59:34,637 - INFO - Latency: 2.000000 seconds
+2023-07-22 20:03:47,227 - INFO - Latency: 3.000000 seconds
