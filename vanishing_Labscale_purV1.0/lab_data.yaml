@@ -36,7 +36,7 @@
   locator_value: //video[@class='max-h-[95%] min-h-[95%] min-w-[95%] max-w-[95%] object-contain']
   action: process_video_frames
 - locator_strategy: xpath
-  locator_value: //*[contains(text(), 'Exit Experiment')]
+  locator_value: //*[@id="root"]/div/div/div/div[1]/div/div[3]/button
   action: click
 
 # - locator_strategy: xpath+
