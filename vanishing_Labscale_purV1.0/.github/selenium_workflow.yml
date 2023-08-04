@@ -2,7 +2,7 @@ name: Run Selenium Script
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # Run at 3:00 PM UTC (adjust as needed)
+    - cron: '40 15 * * *'  # Run at 3:00 PM UTC (adjust as needed)
 
 jobs:
   run_script:
@@ -23,5 +23,5 @@ jobs:
           pip install -r requirements.txt  # If you have any dependencies
 
       - name: Run Selenium Script
-        run: python path/to/your/script.py
+        run: vanishing_Labscale_purV1.0/rod_direction_lab.py
 
